@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951B276A2A8BFF48000EB0ED /* AccountPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B27692A8BFF48000EB0ED /* AccountPreferences.swift */; };
+		951B276D2A8C065A000EB0ED /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 951B276C2A8C065A000EB0ED /* KeychainAccess */; };
 		951B7A8A29D3E14B0065F1BE /* BetterCiscoConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B7A8929D3E14B0065F1BE /* BetterCiscoConnectApp.swift */; };
-		951B7A8C29D3E14B0065F1BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B7A8B29D3E14B0065F1BE /* ContentView.swift */; };
 		951B7A8E29D3E14C0065F1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951B7A8D29D3E14C0065F1BE /* Assets.xcassets */; };
 		951B7A9129D3E14C0065F1BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951B7A9029D3E14C0065F1BE /* Preview Assets.xcassets */; };
+		951B7A9929D3E8D10065F1BE /* VPNClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B7A9829D3E8D10065F1BE /* VPNClient.swift */; };
+		951B7A9B29D3E8EE0065F1BE /* safeShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B7A9A29D3E8EE0065F1BE /* safeShell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951B27692A8BFF48000EB0ED /* AccountPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPreferences.swift; sourceTree = "<group>"; };
 		951B7A8629D3E14B0065F1BE /* BetterCiscoConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterCiscoConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951B7A8929D3E14B0065F1BE /* BetterCiscoConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterCiscoConnectApp.swift; sourceTree = "<group>"; };
-		951B7A8B29D3E14B0065F1BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		951B7A8D29D3E14C0065F1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951B7A9029D3E14C0065F1BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		951B7A9229D3E14C0065F1BE /* BetterCiscoConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetterCiscoConnect.entitlements; sourceTree = "<group>"; };
+		951B7A9829D3E8D10065F1BE /* VPNClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNClient.swift; sourceTree = "<group>"; };
+		951B7A9A29D3E8EE0065F1BE /* safeShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safeShell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951B276D2A8C065A000EB0ED /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				951B7A8929D3E14B0065F1BE /* BetterCiscoConnectApp.swift */,
-				951B7A8B29D3E14B0065F1BE /* ContentView.swift */,
+				951B27692A8BFF48000EB0ED /* AccountPreferences.swift */,
+				951B7A9829D3E8D10065F1BE /* VPNClient.swift */,
+				951B7A9A29D3E8EE0065F1BE /* safeShell.swift */,
 				951B7A8D29D3E14C0065F1BE /* Assets.xcassets */,
 				951B7A9229D3E14C0065F1BE /* BetterCiscoConnect.entitlements */,
 				951B7A8F29D3E14C0065F1BE /* Preview Content */,
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = BetterCiscoConnect;
+			packageProductDependencies = (
+				951B276C2A8C065A000EB0ED /* KeychainAccess */,
+			);
 			productName = BetterCiscoConnect;
 			productReference = 951B7A8629D3E14B0065F1BE /* BetterCiscoConnect.app */;
 			productType = "com.apple.product-type.application";
@@ -97,7 +108,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					951B7A8529D3E14B0065F1BE = {
 						CreatedOnToolsVersion = 14.2;
@@ -113,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 951B7A7D29D3E14B0065F1BE;
+			packageReferences = (
+				951B276B2A8C065A000EB0ED /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 951B7A8729D3E14B0065F1BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				951B7A8C29D3E14B0065F1BE /* ContentView.swift in Sources */,
 				951B7A8A29D3E14B0065F1BE /* BetterCiscoConnectApp.swift in Sources */,
+				951B7A9929D3E8D10065F1BE /* VPNClient.swift in Sources */,
+				951B7A9B29D3E8EE0065F1BE /* safeShell.swift in Sources */,
+				951B276A2A8BFF48000EB0ED /* AccountPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +196,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -240,6 +257,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -266,14 +284,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BetterCiscoConnect/BetterCiscoConnect.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"BetterCiscoConnect/Preview Content\"";
 				DEVELOPMENT_TEAM = 9GVS3YU4CR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,14 +314,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BetterCiscoConnect/BetterCiscoConnect.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"BetterCiscoConnect/Preview Content\"";
 				DEVELOPMENT_TEAM = 9GVS3YU4CR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		951B276B2A8C065A000EB0ED /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		951B276C2A8C065A000EB0ED /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 951B276B2A8C065A000EB0ED /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 951B7A7E29D3E14B0065F1BE /* Project object */;
 }
