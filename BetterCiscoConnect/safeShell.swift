@@ -7,7 +7,7 @@
 
 import Foundation
 
-@discardableResult // Add to suppress warnings when you don't want/need a result
+@discardableResult
 func safeShell(_ command: String) throws -> String {
     let task = Process()
     let pipe = Pipe()
