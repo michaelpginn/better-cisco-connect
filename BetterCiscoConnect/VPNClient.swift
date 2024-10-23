@@ -26,7 +26,7 @@ class VPNClient: ObservableObject {
 
     private static func getState() -> VPNState {
         do {
-            let result = try safeShell("/opt/cisco/anyconnect/bin/vpn state")
+            let result = try safeShell("/opt/cisco/secureclient/bin/vpn state")
             print(result)
             return result.contains("Connected") ? .connected : .disconnected
         } catch {
@@ -63,7 +63,7 @@ class VPNClient: ObservableObject {
 
     func disconnectVPN() {
         do {
-            try safeShell("/opt/cisco/anyconnect/bin/vpn disconnect")
+            try safeShell("/opt/cisco/secureclient/bin/vpn disconnect")
             reloadState()
         } catch {
             state = .error
@@ -79,7 +79,7 @@ class VPNClient: ObservableObject {
         }
 
         do {
-            try safeShell("/opt/cisco/anyconnect/bin/vpn connect vpn.colorado.edu -s <<< $'\(username)\n\(password)\n'")
+            try safeShell("/opt/cisco/secureclient/bin/vpn connect vpn.colorado.edu -s <<< $'\(username)\n\(password)\n'")
             reloadState()
         } catch {
             state = .error
