@@ -22,6 +22,7 @@ extension VPNClient.VPNState {
 @main
 struct BetterCiscoConnectApp: App {
     @StateObject var client = VPNClient()
+    @Environment(\.openSettings) private var openSettings
 
     var body: some Scene {
         MenuBarExtra("VPN", systemImage: client.state.systemImage) {
@@ -66,7 +67,8 @@ struct BetterCiscoConnectApp: App {
                 }.keyboardShortcut("r")
                 Button {
                     NSApp.activate(ignoringOtherApps: true)
-                    NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+                    openSettings()
+//                    NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
                 } label: {
                     Text(client.state == .needsCredentials ? "Log in..." : "Settings")
                 }

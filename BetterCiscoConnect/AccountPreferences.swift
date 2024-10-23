@@ -24,6 +24,7 @@ struct AccountPreferences: View {
             }
         }
         .padding()
+        .frame(maxWidth: 400)
     }
 }
 
